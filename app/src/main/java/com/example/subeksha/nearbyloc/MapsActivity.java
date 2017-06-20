@@ -132,8 +132,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         markerOptions.position(latLng);
                         markerOptions.title(placeName + " : " + vicinity);
                         Marker marker = mMap.addMarker(markerOptions);
-//                        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
-                        marker.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.restaurant));
+                        marker.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.restaurants));
                         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
                         mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
                     }
@@ -160,6 +159,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mGoogleApiClient.connect();
     }
 
+    
     @Override
     public void onConnected(Bundle bundle) {
         mLocationRequest = new LocationRequest();
